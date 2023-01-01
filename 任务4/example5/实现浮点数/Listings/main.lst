@@ -1,0 +1,38 @@
+C51 COMPILER V9.54   MAIN                                                                  12/27/2022 16:57:52 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keill5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.
+                    -lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #incldue<stdio.h>
+*** WARNING C315 IN LINE 2 OF main.c: unknown #directive 'incldue'
+   3          #include "LCD1602.h"
+   4          void main(){
+   5   1        LCD_Init();
+   6   1      while(1){
+   7   2        LCD_ShowNum(1,1,263,3);
+   8   2      LCD_ShowChar(1,4,'.');
+   9   2      LCD_ShowNum(1,5,134,3);
+  10   2      
+  11   2      
+  12   2      }
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     42    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

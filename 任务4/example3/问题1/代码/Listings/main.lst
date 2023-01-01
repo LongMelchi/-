@@ -1,0 +1,53 @@
+C51 COMPILER V9.54   MAIN                                                                  12/27/2022 21:41:26 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "LCD1602.h"
+   3          #include "Delay.h"
+*** WARNING C315 IN LINE 1 OF Delay.h: unknown #directive 'ifndef__DELAY__H__'
+*** WARNING C315 IN LINE 2 OF Delay.h: unknown #directive 'define__DELAY__H__'
+*** WARNING C312 IN LINE 6 OF Delay.h: misplaced endif control
+   4          
+   5          int cnt(int x)
+   6          {
+   7   1        int count=0;
+   8   1        do
+   9   1        {
+  10   2          x=x/10;
+  11   2          count++;
+  12   2        }while(x!=0);
+  13   1        return count;
+  14   1      }
+  15          
+  16          void main()
+  17          {
+  18   1        int x=0;
+  19   1        while(x<=255)
+  20   1        {
+  21   2          LCD_Init();
+  22   2          LCD_ShowNum(1,1,x,cnt(x));
+  23   2          Delay(300);
+  24   2          x++;
+  25   2        }
+  26   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     83    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)
